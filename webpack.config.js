@@ -42,6 +42,14 @@ module.exports = {
                     // Translates CSS into CommonJS
                     "css-loader",
                     // Compiles Sass to CSS
+                                        {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugin: ["autoprefixer"],
+                            }
+                        }
+                    },
                     {
                         loader: "sass-loader",
                         options: {
