@@ -30,7 +30,7 @@
  // HEADER
 
  .hero {
-   height: 90vh;
+   min-height: 650px;
    background: url("https://image.ibb.co/jBXfxA/bg-contact.jpg") no-repeat center center/cover;
    color: $lightFontColor;
    padding: 15% 0 0 0;
@@ -73,6 +73,10 @@
    padding: 10px;
    text-transform: uppercase;
 
+   &__wrapper {
+     display: none;
+   }
+
    &__nav {
      &-list {
        @include flex(row, flex-end, center);
@@ -107,6 +111,21 @@
            transition: 0.3s;
          }
        }
+     }
+   }
+ }
+
+ @media (min-width: 768px) {
+   .hero {
+     min-height: 90vh;
+     padding-top: 14em;
+   }
+ }
+
+ @media (min-width: 996px) {
+   .menu {
+     &__wrapper {
+       display: block;
      }
    }
  }
